@@ -1,0 +1,45 @@
+@import url("reset.css");
+
+:root {
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+html {
+  --font-sans-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+    segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  --font-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman,
+    Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol;
+}
+
+body {
+  background: var(--light-grayish-blue);
+  color: var(--very-dark-grayish-blue);
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 20px;
+  text-align: center;
+}
+
+/* Utilities */
+
+.mobile-stack-desktop-inline {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 40rem) {
+    flex-direction: row;
+  }
+}
+
+.center-my-child {
+  display: grid;
+  place-content: center;
+}
+
+/* Components */
