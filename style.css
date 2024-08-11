@@ -18,6 +18,7 @@ html {
 body {
   background: var(--light-grayish-blue);
   color: var(--very-dark-grayish-blue);
+  height: 100svh;
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -40,6 +41,42 @@ body {
 .center-my-child {
   display: grid;
   place-content: center;
+  height: 100%;
 }
 
 /* Components */
+
+/* Layouts */
+
+.card {
+  background: white;
+  border-radius: 10px;
+  width: min(730px, 100% - 24px);
+  margin: 0 auto;
+
+  .card-image {
+    flex: 1;
+
+    @media (min-width: 40rem) {
+      flex: 0 0 350px;
+    }
+  }
+
+  img {
+    object-fit: cover;
+    max-width: 100%;
+    border-radius: 10px 10px 0 0;
+
+    @media (min-width: 40rem) {
+      border-radius: 10px 0 0 10px;
+    }
+  }
+
+  .card-content {
+    .card-footer {
+      .card-footer-social-expanded {
+        display: none;
+      }
+    }
+  }
+}
